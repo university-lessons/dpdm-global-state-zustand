@@ -1,11 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
+import useCounter from "../states/useCounter";
 
-interface LabelProps {
-  counter: number;
-}
+export default function Label() {
+  const { counter } = useCounter();
 
-export default function Label({ counter }: LabelProps) {
   return (
     <View>
       <Text>Counter: {counter}</Text>
